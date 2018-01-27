@@ -1,0 +1,67 @@
+<div class="container container-shop">
+  <div class="row justify-content-between heigth-general">
+    <div class="col-12 col-lg-2 shop-shadow bg-filter">
+      <app-shop-filters></app-shop-filters>
+    </div>
+
+    <div class="col-12 col-lg-10 shop-shadow bg-products">
+      <div class="row justify-content-end" style="margin-top: 12px">
+        <div class="col-12 col-lg-4 col-md-3">
+          <select class="form-control" [(ngModel)]="sort" (change)="changeSortBy()">
+            <option value="">Ordenar Por</option>
+            <option [ngValue]="1">Nombre</option>
+            <option [ngValue]="2">Menor Precio</option>
+            <option [ngValue]="3">Mayor Precio</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-3 col-md-4 margin-cards" *ngFor="let product of products">
+          <div class="card">
+            <div class="justify-content-center div-img-products">
+              <img class="card-img-top img-products" src="{{product.img}}" alt="Card image cap">
+            </div>
+
+            <div class="card-block">
+              <div class="div-name-product">
+                <h4 class="card-title">{{product.name}}</h4>
+              </div>
+              <div class="div-description-product">
+                <p class="card-text">
+                  {{product.description | slice: 0:70}}
+                  <span [hidden]="product.description.length < 70">...</span>
+                </p>
+              </div>
+              <div class="text-center text-see-more" (click)="viewMore(product)">
+                Ver Mas
+              </div>
+              <div class="text-center">
+                <div class="text-price">
+                  {{product.price | currency:'USD'}}
+                </div>
+              </div>
+              <div class="text-center">
+                <div [ngSwitch]="product.available">
+                  <div *ngSwitchCase="true">
+                    <div class="btn-add" (click)="addShoppingCar(product)">
+                      Agregar
+                      <i class="fa fa-fw fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                  <div *ngSwitchCase="false">
+                    <div class="btn-disabled">
+                      Agotado
+                      <i class="fa fa-fw fa-warning"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

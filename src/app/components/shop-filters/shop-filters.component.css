@@ -1,0 +1,47 @@
+.top-general{
+    margin-top: 15px
+}
+
+.filters-general{
+    margin-top: 5px;
+    border: 1px solid rgb(253, 251, 214); 
+    border-radius: 5px; 
+    background-color: rgb(253, 251, 214)
+}
+
+label, .text-filter {
+    color: #424242;
+    text-align: center; 
+    padding: 10px  ;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
+}
+
+.filter-categories {
+    background-color: #EEEEEE;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 10px
+}
+
+.btn-filters {
+    background: #EEEEEE;
+    width: 100%;
+}
+
+.font-filter-price{
+    font-size: 12px
+}
+
+.hide-filter{
+    display: block;
+  }
+
+@media only screen and (max-width: 768px) {
+    .hide-filter{
+      display: none;
+    }
+
+    .font-filter-price{
+        font-size: 1rem
+    }
+} 

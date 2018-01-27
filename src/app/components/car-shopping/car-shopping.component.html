@@ -1,0 +1,74 @@
+<div id="modal-car-shopping" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-container modal-content">
+      <div class="modal-header">
+        <h5 class="text-titel">
+          <i class="fa fa-fw fa-shopping-cart"></i>Carrito de Compras</h5>
+      </div>
+      <div class="modal-body" *ngIf="products.length > 0">
+        <div class="row align-items-center" *ngFor="let product of products">
+          <div class="col-12 col-lg-2 align-self-center">
+            <div class="img-product">
+              <img style="width: 100%; height: 100%" src="{{product.img}}">
+            </div>
+          </div>
+          <div class="col-12 col-lg-10 align-self-center">
+            <div class="row">
+              <div class="col-12 col-lg-4 text-center">
+                <h5 class="card-title">{{product.name}}</h5>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div style="float: left">
+                  Precio:
+                </div>
+                <h5 class="card-title" style="float: left; margin-left: 10px">{{product.price | currency:'USD'}}</h5>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div style="float: left">
+                  Cantidad:
+                </div>
+                <h5 class="card-title" style="float: left; margin-left: 10px">{{product.quantity}}</h5>
+                <div style="float: left; margin-left: 10px">
+                  <div class="row">
+                    <div class="col-12">
+                      <button class="btn btn-sm btn-danger" (click)="subtractQuantity(product)">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button class="btn btn-sm btn-success" (click)="sumQuantity(product)">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-end">
+          <div class="col-12 col-lg-4 text-center" style="padding-top: 15px;" *ngIf="products.length > 0">
+            <h5 class="card-title" style="margin-left: 10px">TOTAL: {{total | currency:'USD'}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body" *ngIf="products.length === 0">
+        <div class="row justify-content-end">
+          <div class="col-12 col-lg-12 text-center">
+            <h5 class="card-title">Aun no hay articulos en el carrito</h5>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-store" data-dismiss="modal">
+          Tienda
+          <i class="fa fa-fw fa-shopping-basket"></i>
+        </div>
+        <div class="btn-buy" *ngIf="products.length > 0">
+          Comprar
+          <i class="fa fa-fw fa-money"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

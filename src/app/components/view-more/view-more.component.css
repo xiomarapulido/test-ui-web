@@ -1,0 +1,128 @@
+.modal-container{    
+    /* background-image:  url('../../../assets/images/games3.png') !important; */
+    background: -webkit-linear-gradient(left, rgb(235, 175, 11) , rgb(240, 240, 240)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(235, 175, 11) , rgb(240, 240, 240)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(235, 175, 11) , rgb(240, 240, 240)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(235, 175, 11) , rgb(240, 240, 240)); /* Standard syntax */
+    border-radius: 10px; 
+}
+
+.seller, .available{
+    color:#FFF !important; 
+    text-shadow: 1px 0px 30px rgba(255, 255, 255, 1); 
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important; 
+    font-size: 40px !important;
+}
+    .seller{
+        font-size: 20px !important;
+        color:rgb(252, 93, 93) !important; 
+    }
+
+    .available{
+        font-size: 20px !important;
+        color:rgb(252, 165, 93) !important; 
+    }
+
+.btn-buy, .btn-store{
+    width: 80%;
+    height: 40px;
+    display: inline-block;
+    margin-top: 1%;        
+    font-size: 25px !important;
+    padding: 2px    
+}
+
+.btn-store{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #eb9341;
+    -webkit-box-shadow:    0 8px 0 #c59337, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0 8px 0 #c59337, 0 15px 20px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 0 #c59337, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+    text-align: center; 
+    padding: 0px  ;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;  
+}
+
+.btn-store:hover{ 
+    background-color: #ecb86a;
+    text-shadow: 0 -1px 1px rgba(175, 135, 49, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
+    color:#FFF;
+}
+
+.btn-buy{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #ebe841;
+    -webkit-box-shadow:    0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+    text-align: center; 
+    padding: 0px  ;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;  
+}
+
+.btn-buy:hover{ 
+    background-color: #ecdf6a;
+    text-shadow: 0 -1px 1px rgba(175, 137, 49, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
+    color:#FFF;
+}
+
+.btn-buy:active, .btn-store:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.img-product{
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-product{
+        width: 40%;
+        margin-left: 35% !important
+    }  
+}
+
+@media only screen and (max-width: 768px) and (max-height: 420px) {
+    .img-product{
+        width: 40%;
+        margin-left: 35% !important
+    }    
+}
+
+@media only screen and (max-width: 667px) and (max-height: 375px) {
+    .img-product{
+        width: 50%;
+        margin-left: 25% !important
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .img-product{
+        width: 50%;
+        margin-left: 25% !important
+    }
+}

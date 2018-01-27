@@ -1,0 +1,53 @@
+<header>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="text title">Food Store</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-11 col-lg-8">
+        <div class="row justify-content-md-center bg-index-food">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label for="exampleSelect1">Categorias</label>
+              <select class="form-control" [(ngModel)]="category" (change)="changeCategories()">
+                <option value="">Todas</option>
+                <option [ngValue]="categorySelect.id" *ngFor="let categorySelect of categoiresSelect">
+                  {{categorySelect.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label for="exampleSelect1">Estado</label>
+              <select class="form-control" [(ngModel)]="state" (change)="changeEstado()">
+                <option value="">Todos</option>
+                <option [ngValue]="1">Disponibles</option>
+                <option [ngValue]="2">Agotados</option>
+                <option [ngValue]="3">Mas Vendidos</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label for="exampleSelect1">Productos</label>
+              <select class="form-control" [(ngModel)]="product">
+                <option value="">Todos</option>
+                <option [ngValue]="productSelect.id" *ngFor="let productSelect of productsSelect">
+                    {{productSelect.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-12 text-center">
+        <div class="btn-reversi intro" (click)="search()">
+          <h3>Buscar</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

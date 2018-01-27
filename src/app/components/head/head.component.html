@@ -1,0 +1,36 @@
+<nav id="mainNav" class="navbar navbar-toggleable-sm bg-foodPrimary mb-3">
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <i class="fa fa-align-justify color-icon-toogler"></i>
+    </button>
+
+    <div class="flex-row d-flex">
+        <a class="navbar-brand text title-nav" href="" title="Food Store">Food Store</a>
+        <a id="a-hide" class="nav-link shop-text" data-toggle="modal" data-target="#modal-car-shopping">
+            <i class="fa fa-fw fa-2x fa-shopping-cart cart-shopping" title="Carrito de compras"></i>
+            <div *ngIf="number !== 0" id="txt-number-cart" class="number-cart-shopping">{{ number }}</div>
+        </a>
+    </div>
+    <div class="navbar-collapse collapse justify-content-end" id="collapsingNavbar">
+        <ul class="navbar-nav">
+            <li id="li-search" class="align-self-center">
+                <input id="text-search-products" class="form-control txt-search" type="search" placeholder="Buscar Producto" aria-label="Search"
+                    [(ngModel)]="filter" (keyup)="keyUpSearchProduct()">
+            </li>
+            <li id="li-shop" class="nav-item">
+                <a class="nav-link shop-text" (click)="enterShop()">Tienda
+                    <i class="fa fa-fw fa-shopping-basket"></i>
+                </a>
+            </li>
+            <li id="li-shopping-basket" class="justify-content-end" data-toggle="modal" data-target="#modal-car-shopping">
+                <a class="nav-link shop-text">
+                    <i class="fa fa-fw fa-2x fa-shopping-cart cart-shopping" title="Carrito de compras"></i>
+                    <div *ngIf="number !== 0" id="txt-number-cart" class="number-cart-shopping">{{ number }}</div>
+                    <div class="txt-shoping-cart">
+                        Carrito de compras
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

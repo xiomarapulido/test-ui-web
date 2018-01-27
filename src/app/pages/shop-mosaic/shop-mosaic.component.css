@@ -1,0 +1,163 @@
+.heigth-general {
+    min-height: 600px !important
+}
+
+.bg-filter{
+    background-color: #FFFDE7
+}
+
+.bg-products {
+    background-color: #FFECB3
+}
+
+.margin-cards {
+    margin-top:10px; 
+    margin-bottom: 10px
+}
+
+.div-img-products {
+    width:100%; 
+    height: 200px
+}
+
+.div-name-product{
+    height:70px
+}
+
+.div-description-product{
+    height:100px
+}
+
+.text-see-more{
+    color:#FF6F00; 
+    cursor:pointer
+}
+
+.img-products{
+    height: 100% !important; 
+    width: 100% !important
+}
+
+.container-shop {
+    width: 1250px !important;
+    max-width: 100% !important;
+}
+
+.btn-add, .btn-disabled{
+    width: 80%;
+    height: 40px;
+    display: inline-block;
+    margin-top: 1%;        
+    font-size: 25px !important;
+    padding: 2px    
+}
+
+.btn-add{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #ebe841;
+    -webkit-box-shadow:    0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 0 #c5ab37, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+    text-align: center; 
+    padding: 0px  ;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;  
+}
+
+.btn-add:hover{ 
+    background-color: #ecdf6a;
+    text-shadow: 0 -1px 1px rgba(175, 137, 49, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
+    color:#FFF;
+}
+
+.btn-add:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.btn-disabled{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #eb4141;
+    -webkit-box-shadow:    0 8px 0 #c53737, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0 8px 0 #c53737, 0 15px 20px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 0 #c53737, 0 15px 20px rgba(255, 255, 255, 0.35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 50px;
+    color: #fff;
+    text-align: center; 
+    padding: 0px  ;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;  
+}
+
+.btn-disabled:hover{ 
+    background-color: #ec6a6a;
+    text-shadow: 0 -1px 1px rgba(175, 49, 49, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
+    color:#FFF;
+}
+
+.btn-disabled:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.text-price {
+    color: rgb(255, 227, 204) !important;   
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;   
+    text-shadow: 1px 1px 2px rgb(201, 123, 22), 0 0 25px #FFFFFF, 0 0 5px rgb(255, 199, 77) !important;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 667px) and (max-height: 375px) {
+    .div-img-products {
+        width:40%; 
+        height: 200px;
+        margin-left: 30%
+    }
+
+    .div-name-product, .div-description-product {
+        height: 50px;
+        text-align: center;
+    }
+
+    .div-description-product {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .div-img-products {
+        width:60%; 
+        height: 200px;
+        margin-left: 20%
+    }
+
+    
+    .div-name-product, .div-description-product {
+        height: 50px;
+        text-align: center;
+    }
+
+    .div-description-product {
+        height: 50px;
+    }
+}

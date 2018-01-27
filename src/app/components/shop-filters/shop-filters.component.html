@@ -1,0 +1,105 @@
+<div class="row navbar-toggleable-md">
+  <button class="navbar-toggler text-filter  navbar-toggler-center btn-filters" type="button" data-toggle="collapse" data-target="#FilterColapse">
+    Filtros
+    <i class="fa fa-fw fa-filter color-icon-toogler"></i>
+  </button>
+  <div id="FilterColapse" class="col-12 navbar-collapse collapse">
+    <div class="row justify-content-center top-general">
+      <div class="col-11 col-md-12 col-lg-12 text-center hide-filter">
+        <label class="text-filter">Filtros</label>
+      </div>
+      <div class="col-12 col-md-4 col-lg-11 filters-general" *ngIf="filters.length > 0">
+        <label class="text-filter">Filtrado Por:</label>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="row filter-categories" *ngFor="let filter of filters" (click)='removeFilter(filter)'>
+              <div class="col-9">
+                {{filter.name}}
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-minus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-11 filters-general" *ngIf="categoriesShow === 'show'">
+        <label>Categorias:</label>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="row filter-categories" *ngFor="let category of categories" (click)="addCategoryFilter(category)">
+              <div class="col-9">
+                {{category.name}}
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-11 filters-general" *ngIf="price !== 'filtrado'">
+        <label>Precios:</label>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="row filter-categories" (click)='addPriceFilter("Mayor de $30.000")'>
+              <div class="col-9 font-filter-price">
+                Mayor de $30.000
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+            <div class="row filter-categories" (click)='addPriceFilter("De $10.000 a $30.000")'>
+              <div class="col-9 font-filter-price">
+                De $10.000 a $30.000
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+            <div class="row filter-categories" (click)='addPriceFilter("Menor de $10.000")'>
+              <div class="col-9 font-filter-price">
+                Menor de $10.000
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-11 filters-general" *ngIf="bestSeller === '' || available === '' || diabled === ''">
+        <label>Otros</label>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="row filter-categories" *ngIf="bestSeller === ''" (click)="addOtherFilter('1002')">
+              <div class="col-9">
+                Mas Vendidos
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+            <div class="row filter-categories" *ngIf="available === ''" (click)="addOtherFilter('1000')">
+              <div class="col-9">
+                Disponibles
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+            <div class="row filter-categories" *ngIf="diabled === ''" (click)="addOtherFilter('1001')">
+              <div class="col-9">
+                Agotados
+              </div>
+              <div class="col-3 col-lg-2 text-center align-self-center">
+                <i class="fa fa-fw fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

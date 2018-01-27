@@ -1,0 +1,42 @@
+<div id="modal-view-more" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-container modal-content">
+      <div class="modal-header">
+        <h5 class="text-titel">
+          <i class="fa fa-fw fa-shopping-basket"></i>{{product.name}}</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-4 align-self-center">
+            <div class="img-product">
+              <img style="width: 100%; height: 100%" src="{{product.img}}">
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            {{product.description}}
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            <h5 class="card-title">Precio: {{product.price | currency:'USD'}}</h5>
+            
+            <h5 class="card-title available" *ngIf="product.available === true">Producto Disponible</h5>
+            <h5 class="card-title available" *ngIf="product.available === false">Producto Agotado</h5>
+            <h5 class="card-title seller" *ngIf="product.bestSeller === true">Es uno de los productos mas vendidos</h5>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="btn-store" data-dismiss="modal">
+          Volver
+          <i class="fa fa-fw fa-shopping-basket"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="div-click-modal" data-toggle="modal" data-target="#modal-view-more" style="display:none">
+
+</div>
